@@ -44,4 +44,4 @@ alias github='cd ~/Desktop/github/'
 alias nastroje='cd ~/Desktop/github/LS2024/NSWI154-Nastroje-pro-vyvoj/'
 alias paralelne='cd ~/Desktop/github/LS2024/para/NPRG042-Parallel-Prog/'
 alias csharp='cd ~/Desktop/github/LS2024/NPRG038-Adv-CSharp/'
-
+alias DOT='cd ~/Repos/github.com/martinlejko/dot/'

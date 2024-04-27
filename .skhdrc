@@ -148,10 +148,10 @@
 
 # ############################################################### #
 # swap windows
-ctrl + alt - left : yabai -m window --swap west
-ctrl + alt - right : yabai -m window --swap east
-ctrl + alt - up : yabai -m window --swap north
-ctrl + alt - down : yabai -m window --swap south
+ctrl + alt - h : yabai -m window --swap west
+ctrl + alt - l : yabai -m window --swap east
+ctrl + alt - k : yabai -m window --swap north
+ctrl + alt - j : yabai -m window --swap south
 
 #focus windows
 alt - h : yabai -m window --focus west
@@ -159,10 +159,15 @@ alt - l : yabai -m window --focus east
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 
+# Equalize size of windows: ctrl + lalt - e
+ctrl + alt - e : yabai -m space --balance
+
 #opening apps
 cmd - 0 : open -na "Firefox"
 cmd - 9 : open -na "Alacritty"
 cmd - 8 : open -na "Visual Studio Code"
+cmd - 7 : open -na "Finder"
+cmd - 6 : open -na "WhatsApp"
 
 #swapping spaces
 cmd - tab : yabai -m space --focus next
@@ -177,8 +182,21 @@ cmd - g : yabai -m window --toggle zoom-fullscreen
 #different layouts
 alt - e : yabai -m window --toggle split
 
-ctrl + alt - n : yabai -m space --create && \
-	index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
-	yabai -m window --space "${index}" && \
-	yabai -m space --focus "${index}"
+# move window to space #
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+shift + alt - 6 : yabai -m window --space 6;
+shift + alt - 7 : yabai -m window --space 7;
 
+# move window to prev and next space
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
+
+# Resize windows: ctrl + shift - {h, j, k, l}
+ctrl + shift - h    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
+ctrl + shift - j    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
+ctrl + shift - k    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
+ctrl + shift - l : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
