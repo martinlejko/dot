@@ -7,3 +7,14 @@ ln -sf "$PWD/.inputrc" "$HOME/.inputrc"
 ln -sf "$PWD/.bash_profile" "$HOME/.bash_profile"
 ln -sf "$PWD/.yabairc" "$HOME/.yabairc"
 ln -sf "$PWD/.skhdrc" "$HOME/.skhdrc"
+
+#vim passage
+#!/bin/sh
+
+if [ -z "$(which vim)" -o -z "$(which vimtutor)" ]; then
+  echo "Warning, doesn't look like you have full Vim version."
+fi
+
+ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
+ln -sf "$PWD/.vim/autoload/plug.vim" "$HOME/.vim/autoload/plug.vim"
+
