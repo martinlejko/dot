@@ -31,7 +31,8 @@ alias vf='v $(fp)'
 export BROWSER="firefox"
 
 alias v=nvim
-
+alias hided='defaults write com.apple.finder CreateDesktop false | killall Finder'
+alias showd='defaults write com.apple.finder CreateDesktop true | killall Finder'
 # ls
 alias ls='ls --color=auto'
 alias ll='ls -la'
