@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "./hooks/use_uv.py"
+      }
+    ],
+    "stop": [
+      {
+        "command": "./hooks/ruff_format_on_stop.py"
+      }
+    ]
+  }
+}
